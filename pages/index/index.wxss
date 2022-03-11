@@ -1,0 +1,124 @@
+/* pages/index.wxss */
+/* 轮播图 */
+.banner{
+  width: 90%;
+  height: 300rpx;
+  margin: 20rpx auto;
+  border-radius: 20rpx;
+  overflow: hidden;
+}
+
+.banner image{
+  width:100%;
+  height:100%;
+  border-radius: 20rpx;
+}
+/* 导航栏 */
+.navigator{
+  display: flex;
+  flex-direction:row;
+  padding: 20rpx;
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+}
+.iconfont{
+  width: 100rpx;
+  height:100rpx;
+  background-color: #8b068b79;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+}
+/* 推荐歌曲 */
+.main{
+  padding:0 20rpx;
+  margin-top:20rpx;
+}
+
+.title{
+  color:#999;
+}
+.text-title .content{
+  font-size: 36rpx;
+}
+.more{
+  float: right;
+  border:2rpx solid #ccc;
+  border-radius: 50rpx;
+  font-size: 24rpx;
+  font-weight:700;
+  text-align: center;
+  padding:10rpx 20rpx;
+}
+
+/* 内容区 */
+.recommend{
+  display: flex;
+  height: 300rpx;
+}
+.scrollItem{
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* display: inline-block; */
+  width: 200rpx;
+  margin:20rpx 10rpx;
+}
+.recommend .scrollItem image{
+  width:200rpx;
+  height:200rpx;
+  border-radius: 30rpx;
+}
+.recommend .scrollItem text{
+  /* 多行文本溢出，省略号 */
+  overflow: hidden;
+  display: -webkit-box;
+  /* 纵向对齐 */
+  -webkit-box-orient: vertical; 
+  /* 盒子行数 */
+  -webkit-line-clamp: 2;
+}
+
+/* 排行榜 */
+.topList{
+  display: flex;
+  height: 500rpx;
+  padding-bottom: 20rpx;
+}
+.topList .scrollItem{
+  width: 100%;
+}
+.topList .title{
+  font-size: 28rpx;
+  color:#999;
+}
+.topList .topCon{
+  display: flex;
+  margin:10rpx 0;
+}
+.topList .topCon .songImg{
+  width:80rpx;
+  height:80rpx;
+  border-radius: 10rpx;
+}
+.topList .topCon .count{
+  width:80rpx;
+  height:80rpx;
+  line-height: 80rpx;
+  text-align: center;
+}
+.topList .topCon .songInfo{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.topList .topCon .songInfo text{
+  width:400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,75 @@
+<view>
+  <!-- 轮播图 -->
+  <swiper class="banner" indicator-dots indicator-color="#fff" indicator-active-color="purple" autoplay interval="1000" circular >
+    <!-- /循环数据中的banners -->
+    <swiper-item wx:for="{{banners}}" wx:key="targetId">
+        <image src="{{item.pic}}"></image>
+      </swiper-item>
+  </swiper>
+  <!-- 导航栏 -->
+  <view class="navigator">
+    <view class="navItem" bindtap = "toRecom">
+      <text class="iconfont icon-tuijianfantuijian" selectable="false" space="false" decode="false"></text>
+      <text>今日推荐</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-yinleku" selectable="false" space="false" decode="false"></text>
+      <text>歌单</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-paihangbang" selectable="false" space="false" decode="false"></text>
+      <text>排行榜</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-diantai" selectable="false" space="false" decode="false"></text>
+      <text>电台</text>
+    </view>
+    <view class="navItem">
+      <text class="iconfont icon-zhibo" selectable="false" space="false" decode="false"></text>
+      <text>直播</text>
+    </view>
+
+  </view>
+  <!-- 推荐歌曲 -->
+  <view class="main" hover-class="none" hover-stop-propagation="false">
+    <!-- 标题 -->
+    <view class="text-title">
+      <text class="title">推荐歌曲</text>
+      <view>
+        <text class="content">为你精心推荐</text>
+        <text class="more">推荐更多</text>
+      </view>
+    </view>
+  <!-- 内容区 -->
+    <scroll-view class="recommend" enable-flex scroll-x>
+      <view class="scrollItem" wx:for="{{recommendList}}" wx:key="id">
+        <image class="" src="{{item.picUrl}}" lazy-load></image>
+        <text class="">{{item.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+<!-- 排行榜 -->
+<view class="main" hover-class="none" hover-stop-propagation="false">
+  <view class="text-title">
+    <text class="title">排行榜</text>
+    <view>
+      <text class="content">热歌风向标</text>
+      <text class="more">推荐更多</text>
+    </view>
+  </view>
+  <!-- 内容区 -->
+  <scroll-view class="topList" scroll-x enable-flex>
+    <view class="scrollItem" wx:for="{{topList}}" wx:key="index" wx:for-item="topItem">
+      <text class="title">{{topItem.name}}</text>
+      <view class="topCon" wx:for="{{topItem.tracks}}" wx:key="index" wx:for-item="trackItem" wx:for-index="trackIndex">
+        <image class="songImg" src="{{trackItem.al.picUrl}}" lazy-load></image>
+        <text class="count">{{trackIndex+1}}</text>
+        <view class="songInfo">
+          <text class="name">{{trackItem.name}}</text>
+          <text class="author">{{trackItem.ar[0].name}}</text>
+        </view>
+      </view>  
+      </view>
+  </scroll-view>
+  </view>
+</view>

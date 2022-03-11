@@ -1,0 +1,62 @@
+@font-face {
+  font-family: "iconfont"; /* Project id 3233998 */
+  src: url('//at.alicdn.com/t/font_3233998_9hdqm56spte.woff2?t=1646995957616') format('woff2'),
+       url('//at.alicdn.com/t/font_3233998_9hdqm56spte.woff?t=1646995957616') format('woff'),
+       url('//at.alicdn.com/t/font_3233998_9hdqm56spte.ttf?t=1646995957616') format('truetype');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-danlieliebiao:before {
+  content: "\e6e4";
+}
+
+.icon-Playerpause:before {
+  content: "\e6aa";
+}
+
+.icon-Playerplay:before {
+  content: "\e6ab";
+}
+
+.icon-Playerfastforward:before {
+  content: "\e6ac";
+}
+
+.icon-shangyishou_huaban:before {
+  content: "\e637";
+}
+
+.icon-zhibo:before {
+  content: "\e8c1";
+}
+
+.icon-diantai:before {
+  content: "\e636";
+}
+
+.icon-cainixihuan:before {
+  content: "\e652";
+}
+
+.icon-paihangbang:before {
+  content: "\e8b3";
+}
+
+.icon-yinleku:before {
+  content: "\e62d";
+}
+
+.icon-tuijianfantuijian:before {
+  content: "\e6bf";
+}
+
+.icon-a-6-didian:before {
+  content: "\e8ce";
+}
