@@ -8,7 +8,8 @@ Page({
   data: {
     banners: [],
     recommendList:[],
-    topList: []
+    topList: [],
+    isPlay: ''
   },
   // 到推荐歌曲
   toRecom(){
@@ -20,6 +21,20 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad:  function (options) {
+    wx.getBackgroundAudioPlayerState({
+      success (res) {
+        const status = res.status
+        if(status === 1){
+          this.setData({
+            isPlay: true
+          })
+        }else {
+          this.setData({
+            isPlay: false
+          })
+        }
+      }
+    })
     this.getIndexData()    
   },
   async getIndexData (){
